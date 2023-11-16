@@ -1,2 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿/* Напишите программу, которая бесконечно запрашивает целые числа с консоли. 
+Программа завершается при вводе символа ‘q’ или при вводе числа, сумма цифр которого чётная.*/
+
+int count = 1;
+while (count > 0)
+    {
+        Console.WriteLine("введите число");
+        int N = Convert.ToInt32(Console.ReadLine());
+        int summ = 0;
+            if (N != 0)
+            {
+                summ += N % 10;
+                N = N / 10;
+                 if (summ % 2 == 0)
+                 {
+                    break;
+                 }
+            }
+        count++;
+    }
+// я не поняла как сделать еще прерывание на ввод Q
+
+
